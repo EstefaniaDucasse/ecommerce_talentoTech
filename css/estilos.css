@@ -1,0 +1,262 @@
+/* Insertar fuente redonda, corroborar si uso la misma para títulos y parrafos */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* GENERALES */
+
+*{
+font-family: "Poppins", sans-serif;
+margin: 0;
+padding:0;
+box-sizing: border-box;
+}
+
+h1{
+    position:relative;
+    font-size: 3rem;
+    color: white;
+    font-family: "Poppins", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+h2{
+    font-size: 2rem;
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+header{
+    background-color: #d3d2d2c2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0; /* Esto hace que el sticky se active cuando llegue al top */
+    z-index: 1000;
+    flex-direction: row;
+    img{
+        width: 70px;
+    }
+    nav{
+        width: 75%;
+        padding-right: 40px;
+        ul{
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            li{
+                a{
+                    text-decoration: none;
+                    color: #4b4a4a;
+                    font-size: 1.3rem;
+                }
+            }
+        }
+    
+    }
+}
+
+footer{
+    background-color: #d3d2d2;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 20px;
+    img{
+        width: 80px;
+    }
+    ul{
+        list-style: none;
+    }
+    a{
+        color: white;
+        text-decoration: none;
+    }
+}
+
+.imgBackPrincipal{
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+}
+/* INDEX */
+
+.backIndex{
+    background-image: url(../assets/img/back_header_indx.jpg);
+}
+
+.section{
+    display: inline-block;
+    vertical-align: top;
+    margin: 5vh;
+}
+
+.imgBackSecundario{
+    display: inline-block;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 150px;
+    vertical-align: top;
+    backdrop-filter: blur(15px);
+    border: 5px solid #ffffff;
+}
+
+.imgBackSecundario2{
+    display: inline-block;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 150px;
+    vertical-align: top;
+    backdrop-filter: blur(15px);
+    border: 5px solid #ffffff;
+    color: white;
+}
+
+.parrafRosa{
+    display: inline-block;
+    padding: 10px;
+    background-color: #fce4ec;
+    font-size: 1rem;
+    width: 400px;
+    height: auto;
+    vertical-align: top;
+    border: 5px solid #ffffff
+}
+.backMandLab{
+    background-image: url(../assets/img/mandala_lab.jpg);
+    text-align: center;
+}
+.backMandGeo{
+    background-image: url(../assets/img/mandala_geo.png);
+    text-align: center;
+}
+.backMandFig{
+    background-image: url(../assets/img/mandala_figu.png);
+    text-align: center;
+}
+.backMandInt{
+    background-image: url(../assets/img/mandala_int.png);
+    text-align: center;
+}
+
+.backSahuVaras{
+    background-image: url(../assets/img/sahu_vara.png);
+    text-align: center;
+}
+.backSahuConos{
+    background-image: url(../assets/img/sahu_cono.jpeg);
+    text-align: center;
+}
+.backSahuConosInv{
+    background-image: url(../assets/img/sahu_cono_inv.jpeg);
+    text-align: center;
+}
+.backSahuDhoop{
+    background-image: url(../assets/img/sahu_sin\ palo.png);
+    text-align: center;
+}
+
+.contenedor{
+    display: flex;
+    justify-content: center;
+}
+
+/* PRODUCTOS */
+
+.backProductos{
+    background-image: url(../assets/img/back_header_prod.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+}
+
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+    padding: 20px;
+    margin-bottom: 40px;
+    img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover; /* Ajusta la imagen para cubrir el área sin deformarla */
+        border-radius: 5px;
+        border: 1px solid gray;
+        box-shadow: -1px -3px 34px -3px #635858bf;
+    }
+}
+
+
+/* CONTACTO */
+
+.backContacto{
+    background-image: url(../assets/img/back_header_cont.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+}
+
+.sectionCtos {
+    display: flex;
+    flex-wrap: wrap; /*divs se ajusten en pantallas chicas */
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px; /* Ajusta el espacio entre los divs de forma uniforme */
+    width: 100%; 
+    height: 80%;
+    padding: 0 10vh; 
+}
+
+.ubicaciones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45%; /* Ajusta el ancho para que los divs ocupen espacio adecuado en pantallas grandes */
+    height: 90%;
+    margin: 10px 0; /* Margen vertical */
+}
+
+.mapas {
+    width: 100%; /* Asegura que el mapa ocupe el ancho del contenedor */
+    height: 450px;
+}
+
+.sectionForm{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+form {
+    display: flex;
+    flex-direction: column; 
+    gap: 15px; 
+    box-shadow: -1px 6px 39px -13px rgba(99,88,88,0.75);
+    padding: 20px;
+
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .sectionCtos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ubicaciones {
+        width: 90%; /* Ocupa casi todo el ancho en pantallas pequeñas */
+    }
+}
