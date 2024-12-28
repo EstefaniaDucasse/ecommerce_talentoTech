@@ -26,18 +26,20 @@ h2{
     font-weight: 400;
     font-style: normal;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 40px;
     margin-bottom: 15px;
 }
 
-header{
+
+/* HEADER ANTES DE BOOTSTRAP*/
+/*header{
     background-color: #d3d2d2c2;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: sticky;
     top: 0; /* Esto hace que el sticky se active cuando llegue al top */
-    z-index: 1000;
+    /*z-index: 1000;
     flex-direction: row;
     img{
         width: 70px;
@@ -60,24 +62,62 @@ header{
         }
     
     }
+}*/
+
+header{
+    background-color: #dfdfdfad;
+    position: sticky;
+    z-index: 1000;
+    top: 0;
+    z-index: 1000;
+    box-shadow:-3px 16px 11px -6px rgba(122,115,115,0.4);
+    img{
+        width: 60px;
+    }
 }
+
 
 footer{
     background-color: #d3d2d2;
-    color: white;
+    color: black;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-right: 20px;
+    padding-left: 15px;
+    gap: 40px;
+    font-size: 1rem;
     img{
         width: 80px;
     }
-    ul{
-        list-style: none;
-    }
+
     a{
-        color: white;
+        color: black;
         text-decoration: none;
+        margin-right: 10px;
+    }
+    .card{
+        background-color: #d3d2d2;
+        border: none;
+    }
+    .card-title{
+        font-size: large;
+    }
+    .card-text{
+        font-size: medium;
+    }
+    .card-body {
+        margin: 0; /* Asegura que no haya márgenes externos adicionales */
+        p {
+            margin-bottom: 5px; /* Reduce el espacio entre párrafos */
+            line-height: 1.2; /* Ajusta el espaciado entre líneas dentro del párrafo */
+        }
+    }   
+
+    .redes_sociales {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 15px; 
     }
 }
 
@@ -86,8 +126,23 @@ footer{
     background-size: cover;
     background-position: center;
     height: 70vh;
+    align-content: center;
+    padding-left: 20px;
+    box-shadow: 0px -21px 21px -11px rgba(255,255,255,0.86) inset;
 }
+
+
 /* INDEX */
+
+.h1_span{
+    font-family: "Poppins", serif;
+    font-weight: 180;
+    font-size: 3.3rem;
+    color: #ffffff;
+    background-color: #ffffff63;
+    box-shadow: 1px -1px 15px 5px rgba(219, 219, 219, 0.658);
+    border-radius: 5px;
+}
 
 .backIndex{
     background-image: url(../assets/img/back_header_indx.jpg);
@@ -99,20 +154,21 @@ footer{
     margin: 5vh;
 }
 
-.imgBackSecundario{
-    display: inline-block;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 200px;
-    height: 150px;
-    vertical-align: top;
-    backdrop-filter: blur(15px);
-    border: 5px solid #ffffff;
+.card-img-top{
+    width: 15%;
+    margin: 15px;
 }
 
-.imgBackSecundario2{
-    display: inline-block;
+.sectionBeneficios{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    padding-top: 30px;
+    background-color: rgba(231, 130, 189, 0.624);
+}
+
+.imgBackSecundario{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -121,51 +177,22 @@ footer{
     vertical-align: top;
     backdrop-filter: blur(15px);
     border: 5px solid #ffffff;
-    color: white;
 }
+
 
 .parrafRosa{
-    display: inline-block;
-    padding: 10px;
     background-color: #fce4ec;
-    font-size: 1rem;
-    width: 400px;
-    height: auto;
-    vertical-align: top;
-    border: 5px solid #ffffff
-}
-.backMandLab{
-    background-image: url(../assets/img/mandala_lab.jpg);
-    text-align: center;
-}
-.backMandGeo{
-    background-image: url(../assets/img/mandala_geo.png);
-    text-align: center;
-}
-.backMandFig{
-    background-image: url(../assets/img/mandala_figu.png);
-    text-align: center;
-}
-.backMandInt{
-    background-image: url(../assets/img/mandala_int.png);
-    text-align: center;
+    align-items: stretch;
 }
 
-.backSahuVaras{
-    background-image: url(../assets/img/sahu_vara.png);
-    text-align: center;
+.img-card {
+    height: 100%;
+    object-fit: cover; 
 }
-.backSahuConos{
-    background-image: url(../assets/img/sahu_cono.jpeg);
-    text-align: center;
-}
-.backSahuConosInv{
-    background-image: url(../assets/img/sahu_cono_inv.jpeg);
-    text-align: center;
-}
-.backSahuDhoop{
-    background-image: url(../assets/img/sahu_sin\ palo.png);
-    text-align: center;
+
+.col-md-4 {
+    display: flex; 
+    align-items: stretch; /* Asegura que el contenido ocupe toda la altura disponible */
 }
 
 .contenedor{
@@ -175,6 +202,10 @@ footer{
 
 /* PRODUCTOS */
 
+.titulo{
+    margin-top: 50px;
+}
+
 .backProductos{
     background-image: url(../assets/img/back_header_prod.jpg);
     background-size: cover;
@@ -182,23 +213,58 @@ footer{
     height: 70vh;
 }
 
+.container{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
 .galeria {
-    display: flex;
+    /*display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     gap: 20px;
     padding: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 40px;*/
+    align-items: center;
     img {
         width: 200px;
         height: 200px;
         object-fit: cover; /* Ajusta la imagen para cubrir el área sin deformarla */
-        border-radius: 5px;
-        border: 1px solid gray;
-        box-shadow: -1px -3px 34px -3px #635858bf;
+        border-top-left-radius: 5px;
+        flex-grow: 1;
+        object-fit: cover;
+        opacity: 0.8;
+        transition: .5s ease;
+        /*border: 1px solid gray;*/
+        /*box-shadow: -1px -3px 34px -3px #635858bf;*/
+    }
+    img:hover{
+        transform: scale(1.15);
+        opacity: 1;
+        filter:contrast(120%);
     }
 }
 
+
+/*centrar veerticalmente el contenido de las tarjetas*/
+.card_galeria{
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: -1px -3px 34px -3px #635858bf
+}
+
+.card_body_galeria{
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+}
 
 /* CONTACTO */
 
@@ -227,27 +293,40 @@ footer{
     width: 45%; /* Ajusta el ancho para que los divs ocupen espacio adecuado en pantallas grandes */
     height: 90%;
     margin: 10px 0; /* Margen vertical */
+    overflow: hidden;
 }
 
 .mapas {
     width: 100%; /* Asegura que el mapa ocupe el ancho del contenedor */
-    height: 450px;
+    height: 350px;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.mapas:hover{
+    transform: scale(1.1);
 }
 
 .sectionForm{
     display: flex;
     justify-content: center;
     margin-bottom: 40px;
+    padding-top: 30px;
+    background-color: #d482169f;
 }
 
 form {
     display: flex;
     flex-direction: column; 
     gap: 15px; 
-    box-shadow: -1px 6px 39px -13px rgba(99,88,88,0.75);
+    box-shadow: -1px 6px 39px -13px #635858bf;
+    border-radius: 10px;
     padding: 20px;
+    margin: 30px;
+    background-color: white;
 
 }
+
 
 /* Media query para pantallas pequeñas */
 @media (max-width: 768px) {
